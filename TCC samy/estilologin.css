@@ -1,0 +1,148 @@
+
+/* Add a black background color to the top navigation */
+.topnav{
+  background: black;
+  display: -webkit-flex; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -50px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+
+#menu ul li { display: inline; }
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+	 display: block;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ADD8E6;
+    color: black;
+	text-align: center;
+	
+}
+
+.topnav a.active {
+    background-color: blue;
+    color: white;
+	text-align: center;
+}
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 30px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+* {
+    box-sizing: border-box;
+}
+#sidebar{
+	 overflow: hidden;
+    background-color: #ADD8E6;
+	border-radius:1em;
+	color: black;
+	float: right;
+	width: 300px;
+}
+
+#sidebar p{
+font-family:algerian;	
+}
+
+#sidebar ul{
+	list-style: none;
+}
+
+#sidebar ul li a{
+	font-family:Times New Roman, Serif;
+	font-size:20px;
+	color: black;
+	text-decoration: box;
+}
+
+#sidebar ul li a:hover{
+	text-decoration: underline;
+	color: blue;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+    margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+body {

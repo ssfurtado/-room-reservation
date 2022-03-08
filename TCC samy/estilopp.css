@@ -1,0 +1,278 @@
+﻿
+/* Add a black background color to the top navigation */
+.topnav{
+  background: black;
+  display: -webkit-flex; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -50px;
+  margin-left: -30px;
+  margin-right: -30px;
+}
+
+
+#menu ul li { display: inline; }
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+	 display: block;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ADD8E6;
+    color: black;
+	text-align: center;
+	
+}
+
+.topnav a.active {
+    background-color: blue;
+    color: white;
+	text-align: center;
+}
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* aqui definimos o tamanho do layout, sua margem, cor de fundo e etc*/
+#layout{
+	width: 980px;
+	margin: auto;
+	background: white;
+	padding: 10px 20px;
+	border-radius:1em;
+}
+
+/* aqui definimos as propriedades das imagens e suas bordas*/
+img{
+	
+	text-align: center;
+	border-radius:1em;
+}
+
+
+/* aqui definimos apenas a borda  dos videos do youtube*/
+iframe{
+	border-radius:1em;
+}
+
+
+.active {
+    background-color: #ADD8E6;
+}
+
+/* aqui definimos as propriedades da divisão conteudo*/
+#conteudo{
+	float:center;
+	color:black;
+}
+
+
+
+article h3{
+	text-align:justify;
+	font-family:Times New Roman;
+	font-size:25px;
+}
+article p{
+	text-align:justify;
+	font-family:Times New Roman, Serif;
+	font-size:20px;
+}
+
+section p{
+	text-align:justify;
+	font-family:Times New Roman, Serif;
+	font-size:20px;
+}
+	
+#sidebar{
+	 overflow: hidden;
+    background-color: #ADD8E6;
+	border-radius:1em;
+	color: black;
+	float: right;
+	width: 300px;
+}
+
+#sidebar p{
+font-family:algerian;	
+}
+
+#sidebar ul{
+	list-style: none;
+}
+
+#sidebar ul li a{
+	font-family:Times New Roman, Serif;
+	font-size:20px;
+	color: black;
+	text-decoration: box;
+}
+
+#sidebar ul li a:hover{
+	text-decoration: underline;
+	color: blue;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 12px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+footer{
+	clear:both;
+	text-align: center;
+	font-family:Times New Roman, Serif;
+	font-size:20px;
+}
+#name{
+	color: Black;
+	text-align: left;
+	font-family:algerian;
+	
+
+}
+#sobrenome{
+	color: Black;
+	text-align: center-left;
+	font-family:algerian;
+}
+#email{
+	color: Black;
+	text-align: center-left;
+	font-family:algerian;
+}
+#mensagem{
+	color: Black;
+	text-align: center-left;
+	font-family:algerian;
+}
+#h6{
+	text-align:center;
+	
+}
+#sexo p{
+	color: Black;
+	text-align: center-left;
+	font-family:algerian;
+}
+#p{
+	font-family:algerian;
+}
+/*aqui se encerra a definição dos tipos de letra e etc*/
+
+
+form {
+
+  /* aqui é apenas para centralizar o form na página */
+  margin: 0 auto;
+  width: 400px;
+  text-align:left;
+  
+  /* aqui é para definir as bordas do formulário */
+  padding: 1em; 
+  border: 5px solid #B0E0E6;
+  border-radius: 1em;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+.campo{
+	border-radius:1em;
+}
+/* O Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: white;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 15px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+	border: 5px solid green;
+	border-radius: 1em;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+	border-radius:1em;
+	border:1px solid black;
+	margin: 0 4px;
+}
+
+
+}
+  <style>
+        #calendario{
+            position: relative;
+            width: 70%;
+            margin: 0px auto;
+        }        
+    </style>
+    
+    <style>
+        #calendario{
+            position: relative;
+            width: 70%;
+            margin: 0px auto;
+        }        
+    </style>
+

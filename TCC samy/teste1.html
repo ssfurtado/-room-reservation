@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+	<head>
+		<title>Reservas</title>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">	
+		<link rel="stylesheet" type="text/css" href="estilopp.css" />
+		
+		<center>
+		<img src="logo3.png" src="logo3.png" height="250" width="300">
+		</center>
+	</head>
+	
+	<!-- utilizaçao do background para colocar a imagem de fundo da página, sendo as outras propriedades para definir o tamanho e etc-->
+	<body background="background.jpg" bgproperties="fixed">
+	</form>
+		<!-- usado para fazer a divisão chamada layout-->
+		<div id="layout">
+		
+			<!--utilazado para a criação do cabeçalho da página-->
+			<header>
+				
+				<!--utilizado para criar a barra de navegação e seus menus--> 
+				<nav>
+					
+					
+				
+				
+			<section class="top-bar-section">
+			
+					<ul class="topnav">
+						<li><a  href="teste1.html">Reservas de Salas</a></li>	
+						<li id="menu-calendario" class="active"><a href="calendario.html">Calendário<span class="wrapper-notifications" data-notifications="reservas_pendentes reservas_malucas"></span></a></li>
+						<li id="menu-lista"><a href="lista.php">Lista</a></li>
+						<li><a href="login.html">Faça seu login</a></li>
+						
+						
+					</ul>				
+					
+	
+						 			
+    
+						
+	<link rel='estilo.css' href='fullcalendar/fullcalendar.css' />
+	<script src='fullcalendar/lib/jquery.min.js'></script>
+    <script src='fullcalendar/lib/moment.min.js'></script>
+    <script src='fullcalendar/fullcalendar.js'></script>
+    
+    <!-- script de tradução -->
+    <script src='fullcalendar/lang/pt-br.js'></script>
+        
+    <script>
+       $(document).ready(function() {	
+           	
+            //CARREGA CALENDÁRIO E EVENTOS DO BANCO
+            $('#calendario').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                defaultDate: '2016-01-12',
+                editable: true,
+                eventLimit: true, 
+                events: 'eventos.php',           
+                eventColor: '#dd6777'
+            });	
+            
+            //CADASTRA NOVO EVENTO
+            $('#novo_evento').submit(function(){
+                //serialize() junta todos os dados do form e deixa pronto pra ser enviado pelo ajax
+                var dados = jQuery(this).serialize();
+                $.ajax({
+                    type: "POST",
+                    url: "cadastrar_evento.php",
+                    data: dados,
+                    success: function(data)
+                    {   
+                        if(data == "1"){
+                            alert("Cadastrado com sucesso! ");
+                            //atualiza a página!
+                            location.reload();
+                        }else{
+                            alert("Houve algum problema.. ");
+                        }
+                    }
+                });                
+                return false;
+            });	
+	   }); 
+                
+    </script>
+    
+  
+					
+					
+				
+			</header>
+			
+			
+			</footer>
+		</div>
+		
+		<div id='calendario'>
+        <br/>
+        <form id="novo_evento" action="" method="post">
+            Sala:<select name="time">
+						<option value="bota">Selecione...</option>
+						<option value="flu">Quadra</option>
+						<option value="flu">Laboratório de nutrição 1</option>
+						<option value="flu">Laboratório de nutrição 2</option>
+						<option value="flu">Laboratório de informática 1</option>
+						<option value="flu">Laboratório de informática 2</option>
+						<option value="flu">Laboratório de informática 3</option>
+						<option value="flu">Laboratório de informática 4</option>
+						<option value="flu">Laboratório de informática 5</option>
+						<option value="flu">Laboratório de informática 6</option>>
+						<option value="vasco">Laboratório de IMC</option>
+						<option value="flu">Laboratório de Química</option>
+						<option value="flu">Multimeios 1</option>
+						<option value="flu">Multimeios 2</option>
+						<option value="fla">Anfiteatro</option>
+						</select>          
+            <p>Data: <input type="date" name="data" required/><br/><br/> 
+            Horario: <input type="time" name="horas" required/><br/><br/>           
+            <button type="submit"> Cadastrar novo evento </button>
+        </form>
+		</div>
+		
+			<center><p>© 2019 - 2019</p></center>
+	</body>
+	
+	
+</html>
